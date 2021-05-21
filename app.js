@@ -69,9 +69,9 @@ function addToDo() {
 function deleteCheck(e) {
     const task = e.target;
     const todo = task.parentElement;
-    if (task.classList[0] === 'remove-btn' || task.classList[0] === 'fa fa-trash') {
+    if (task.classList[0] === 'remove-btn') {
         todo.remove();
-    } else {
+    } else if(task.classList[0] === 'complete-btn'){
         todo.classList.add('complete');
     }
 
